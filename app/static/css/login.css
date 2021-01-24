@@ -1,0 +1,144 @@
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin: 1.3rem;
+}
+
+.login-container {
+  min-height: 350px;
+  width: 260px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  height: 85px;
+  width: 85px;
+  margin-top: -40px;
+
+  background-color: #181a1c;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(40, 223, 153, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  width: 80%;
+}
+#username,
+#password {
+  width: 100%;
+  height: 38px;
+  border-radius: 6px;
+  border: none;
+  background-color: #131416;
+  margin-top: 5px;
+  margin-bottom: 18px;
+  padding-left: 7%;
+  font-size: 14px;
+}
+label {
+  color: white;
+  font-size: 1rem;
+}
+input:focus {
+  outline: none;
+}
+/* Customize the label (the container) */
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #131416;
+  border-radius: 6px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #28df99;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container p {
+  margin: 0;
+  margin-top: 2px;
+  color: #28df99;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 32px;
+  background-color: #28df99;
+  border: none;
+  border-radius: 6px;
+  margin: 13px 0 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 10%;
+  font-size: 10px;
+  margin-bottom: 15px;
+}

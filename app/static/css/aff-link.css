@@ -1,0 +1,97 @@
+.zurueck-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.zurueck-btn button {
+  height: 45px;
+  width: 50%;
+  margin-top: 1.5rem;
+  background-color: transparent;
+  border: 4px solid #28df99;
+  color: #28df99;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.link-icon {
+  position: fixed;
+  z-index: -10;
+  margin-top: 2.2rem;
+}
+
+.aff-link-header {
+  width: 80%;
+  padding: 10px;
+  margin-top: 120px;
+}
+h3 {
+  color: #28df99;
+  font-size: 24px;
+  text-align: center;
+}
+
+.aff-link {
+  width: 80%;
+  padding: 10px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.aff-link p {
+  font-size: 9px;
+}
+.copy-btn {
+  background-color: transparent;
+  border: none;
+}
+.grow-link {
+  padding: 10px 15px;
+  min-width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 11px;
+  margin-top: 1rem;
+  background-color: #131416;
+  box-shadow: 0px 0px 15px #28df99;
+}
+
+.app-store {
+  margin-top: 5rem;
+  background-image: url("./../img/aff-link-store-bg.svg");
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-store h3 {
+  font-size: 27px;
+  color: black;
+  font-weight: bold;
+  margin-top: 4rem;
+}
+.app-store button {
+  height: 45px;
+  padding: 0 15px;
+  margin-top: 1.5rem;
+  background-color: transparent;
+  border: 4px solid black;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.store-icons {
+    margin-top: 1rem;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

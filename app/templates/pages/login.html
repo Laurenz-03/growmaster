@@ -1,0 +1,30 @@
+{% extends './layout.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="./../../static/css/login.css">
+
+<div class="login-container rounded-and-shadow">
+    <div class="logo">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="59.403" height="59.403" viewBox="0 0 59.403 59.403">
+            <path id="Logo"
+                d="M282.419,265.105H265.375l12.009,12.009a17.064,17.064,0,1,1-.019-24.075L286.3,244.1a29.7,29.7,0,1,0,8.7,21H282.419Z"
+                transform="translate(-235.6 -235.4)" fill="#28df99" />
+        </svg>
+    </div>
+
+    <h2>Login</h2>
+    <form action="">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="username">Passwort:</label>
+        <input type="password" id="password" name="password"><br>
+            <label class="container"><p>Eingeloggt bleiben</p>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        <input type="submit" value="Einloggen" class="submit-btn">
+    </form>
+    <a href="#">Passwort vergessen?</a>
+</div>
+{% endblock %}

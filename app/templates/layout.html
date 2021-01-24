@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title }} | GrowMaster</title>
+    {% else %}
+    <title>GrowMaster</title>
+    {% endif %}
+</head>
+
+<script>
+    var mobileNavStatus = "close";
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function toggleNav() {
+        if (mobileNavStatus === "close") {
+            console.log("open");
+            document.getElementById("sidebar").style.left = "20%";
+            document.getElementById("sidebar-arrow").style.transform = "rotate(540deg)"
+            mobileNavStatus = "open";
+        } else {
+            console.log("close");
+            document.getElementById("sidebar").style.left = "100%";
+            document.getElementById("sidebar-arrow").style.transform = "rotate(0deg)"
+            mobileNavStatus = "close";
+        }
+        //document.getElementById("main").style.marginLeft = "250px";
+    }
+</script>
+
+
+<body>
+    {% if sidebar != False %}
+    <div class="sidebar" id="sidebar">
+        <button onclick="toggleNav()" class="sidebar-toggle">
+            <svg id="sidebar-arrow" xmlns="http://www.w3.org/2000/svg" width="44.757" height="22"
+                viewBox="0 0 44.757 22">
+                <path id="long-arrow-alt-left-solid"
+                    d="M13.392,160.889H43.557a1.2,1.2,0,0,0,1.2-1.2V154.1a1.2,1.2,0,0,0-1.2-1.2H13.392v-4.6A2.4,2.4,0,0,0,9.3,146.6L.7,155.2a2.4,2.4,0,0,0,0,3.391l8.6,8.6a2.4,2.4,0,0,0,4.093-1.7v-4.6Z"
+                    transform="translate(0.001 -145.893)" fill="#181a1c" />
+            </svg>
+
+        </button>
+        <div class="inner-sidebar">
+            <a  href={{url_for('home')}}>
+
+                <img src="./../static/img/Logo.svg" alt="Logo" width="90px" height="90px">
+            </a>
+            <div class="sidebar-box">
+                <a>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.526" height="23.738"
+                            viewBox="0 0 30.526 23.738">
+                            <path id="home-solid"
+                                d="M14.843,38.208l-9.77,8.047V54.94a.848.848,0,0,0,.848.848l5.938-.015a.848.848,0,0,0,.844-.848V49.853A.848.848,0,0,1,13.55,49h3.391a.848.848,0,0,1,.848.848v5.068a.848.848,0,0,0,.848.851l5.936.016a.848.848,0,0,0,.848-.848V46.249l-9.768-8.041a.646.646,0,0,0-.811,0Zm15.433,5.469-4.43-3.652v-7.34a.636.636,0,0,0-.636-.636H22.242a.636.636,0,0,0-.636.636v3.848l-4.744-3.9a2.544,2.544,0,0,0-3.232,0L.215,43.677a.636.636,0,0,0-.085.9l1.351,1.643a.636.636,0,0,0,.9.086L14.843,36.035a.646.646,0,0,1,.811,0L28.119,46.3a.636.636,0,0,0,.9-.085l1.351-1.643a.636.636,0,0,0-.09-.9Z"
+                                transform="translate(0.015 -32.05)" fill="#131416" />
+                        </svg>
+
+                    </div>
+                    <p>Mein Profil</p>
+                </a>
+                <div class="sidebar-space"></div>
+                <a>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23.964" height="23.964"
+                            viewBox="0 0 23.964 23.964">
+                            <path id="play-circle-solid"
+                                d="M19.982,8A11.982,11.982,0,1,0,31.964,19.982,11.98,11.98,0,0,0,19.982,8Zm5.59,13.142-8.5,4.88a1.162,1.162,0,0,1-1.725-1.015V14.957a1.162,1.162,0,0,1,1.725-1.015l8.5,5.17A1.163,1.163,0,0,1,25.572,21.142Z"
+                                transform="translate(-8 -8)" fill="#131416" />
+                        </svg>
+                    </div>
+                    <p>Coachings</p>
+                </a>
+            </div>
+            <br>
+            <div class="sidebar-box">
+                <a>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22.823" height="22.823"
+                            viewBox="0 0 22.823 22.823">
+                            <path id="plus-square-regular"
+                                d="M17.932,42.6v1.63a.613.613,0,0,1-.611.611H12.838v4.483a.613.613,0,0,1-.611.611H10.6a.613.613,0,0,1-.611-.611V44.838H5.5a.613.613,0,0,1-.611-.611V42.6a.613.613,0,0,1,.611-.611H9.985V37.5a.613.613,0,0,1,.611-.611h1.63a.613.613,0,0,1,.611.611v4.483h4.483A.613.613,0,0,1,17.932,42.6Zm4.891-8.151V52.377a2.446,2.446,0,0,1-2.445,2.445H2.445A2.446,2.446,0,0,1,0,52.377V34.445A2.446,2.446,0,0,1,2.445,32H20.377A2.446,2.446,0,0,1,22.823,34.445ZM20.377,52.072V34.751a.307.307,0,0,0-.306-.306H2.751a.307.307,0,0,0-.306.306V52.072a.307.307,0,0,0,.306.306H20.072A.307.307,0,0,0,20.377,52.072Z"
+                                transform="translate(0 -32)" fill="#131416" />
+                        </svg>
+                    </div>
+                    <p>Creator</p>
+                </a>
+                <div class="sidebar-space"></div>
+                <a href={{url_for('gruppen')}}>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.439" height="21.334"
+                            viewBox="0 0 25.439 21.334">
+                            <path id="telegram-plane-brands"
+                                d="M25.383,66.342l-3.839,18.1c-.29,1.278-1.045,1.6-2.118.994l-5.849-4.31-2.822,2.715a1.469,1.469,0,0,1-1.176.574L10,78.46l10.841-9.8c.471-.42-.1-.653-.733-.233L6.705,76.87.935,75.064c-1.255-.392-1.278-1.255.261-1.857l22.568-8.694c1.045-.392,1.959.233,1.618,1.829Z"
+                                transform="translate(-0.016 -64.399)" fill="#131416" />
+                        </svg>
+                    </div>
+                    <p>Gruppen</p>
+                </a>
+                <div class="sidebar-space"></div>
+                <a>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21.163" height="24.186"
+                            viewBox="0 0 21.163 24.186">
+                            <path id="book-solid"
+                                d="M21.163,17.006V1.134A1.131,1.131,0,0,0,20.029,0H4.535A4.536,4.536,0,0,0,0,4.535V19.651a4.536,4.536,0,0,0,4.535,4.535H20.029a1.131,1.131,0,0,0,1.134-1.134V22.3a1.143,1.143,0,0,0-.42-.883,10.534,10.534,0,0,1,0-3.529,1.126,1.126,0,0,0,.42-.879ZM6.046,6.33a.284.284,0,0,1,.283-.283H16.344a.284.284,0,0,1,.283.283v.945a.284.284,0,0,1-.283.283H6.33a.284.284,0,0,1-.283-.283Zm0,3.023A.284.284,0,0,1,6.33,9.07H16.344a.284.284,0,0,1,.283.283V10.3a.284.284,0,0,1-.283.283H6.33a.284.284,0,0,1-.283-.283Zm11.97,11.81H4.535a1.512,1.512,0,0,1,0-3.023H18.017A17.007,17.007,0,0,0,18.017,21.163Z"
+                                fill="#121416" />
+                        </svg>
+                    </div>
+                    <p>Bücher</p>
+                </a>
+                <div class="sidebar-space"></div>
+                <a>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26.572" height="23.62"
+                            viewBox="0 0 26.572 23.62">
+                            <path id="trophy-solid"
+                                d="M25.465,2.952h-4.8V1.107A1.1,1.1,0,0,0,19.56,0H7.012A1.1,1.1,0,0,0,5.9,1.107V2.952h-4.8A1.1,1.1,0,0,0,0,4.06V6.643a6.02,6.02,0,0,0,2.856,4.646A10.808,10.808,0,0,0,7.93,13.212a10.2,10.2,0,0,0,3.142,3.4v3.322H8.857A2.662,2.662,0,0,0,5.9,22.512v.554a.555.555,0,0,0,.554.554H20.114a.555.555,0,0,0,.554-.554v-.554a2.662,2.662,0,0,0-2.952-2.583H15.5V16.608a10.2,10.2,0,0,0,3.142-3.4,10.77,10.77,0,0,0,5.075-1.924,6.033,6.033,0,0,0,2.856-4.646V4.06A1.1,1.1,0,0,0,25.465,2.952ZM4.581,8.894A3.393,3.393,0,0,1,2.952,6.643V5.9H5.914A16.569,16.569,0,0,0,6.5,9.882,7.434,7.434,0,0,1,4.581,8.894ZM23.62,6.643a3.545,3.545,0,0,1-1.628,2.251,7.463,7.463,0,0,1-1.928.987,16.569,16.569,0,0,0,.59-3.977H23.62Z"
+                                fill="#131416" />
+                        </svg>
+
+                    </div>
+                    <p>Leaderboard</p>
+                </a>
+                <div class="sidebar-space"></div>
+                <a href={{url_for('app_download')}}>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 224.372 248.9">
+                            <path id="google-play-brands" d="M171.168,113.923,63.858,6.321,200.391,84.7l-29.222,29.222ZM35.851,0A18.9,18.9,0,0,0,25.3,17.164V231.736A18.9,18.9,0,0,0,35.851,248.9L160.617,124.426ZM242.6,109.693l-28.639-16.58-31.945,31.362,31.945,31.362,29.222-16.58c8.752-6.953,8.752-22.61-.583-29.563ZM63.858,242.628l136.533-78.38-29.222-29.222Z" transform="translate(-25.3)" fill="#1f2123"/>
+                          </svg>
+
+                    </div>
+                    <p>App-Download</p>
+                </a>
+            </div>
+            <br>
+            <div class="sidebar-box">
+                <a>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23.274" height="27" viewBox="0 0 23.274 27">
+                            <path id="font-awesome-flag-brands"
+                                d="M26.3,18.954c0,.378-.324.54-.7.7a12.438,12.438,0,0,1-4.86,1.242c-2.43,0-3.564-1.512-6.48-1.512a15.451,15.451,0,0,0-6.1,1.566c-.108.054-.216.054-.324.108v4.1A1.77,1.77,0,0,1,6.053,27a1.821,1.821,0,0,1-1.836-1.836V5.4a3.015,3.015,0,1,1,4.86-2.376A2.868,2.868,0,0,1,7.889,5.4V7.074a16.074,16.074,0,0,1,6.048-1.512c3.442,0,5.151,1.458,6.7,1.458,2.052,0,4.32-1.458,4.86-1.458a.779.779,0,0,1,.81.7v12.69Z"
+                                transform="translate(-3.029)" fill="#121416" />
+                        </svg>
+                    </div>
+                    <p>Dein Weg</p>
+                </a>
+            </div>
+            <br>
+            <div class="sidebar-box">
+                <a>
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26.496" height="21.197" viewBox="0 0 26.496 21.197">
+                            <path id="crown-solid" d="M21.859,18.547H4.637a.664.664,0,0,0-.662.662v1.325a.664.664,0,0,0,.662.662H21.859a.664.664,0,0,0,.662-.662V19.209A.664.664,0,0,0,21.859,18.547ZM24.509,5.3a1.988,1.988,0,0,0-1.987,1.987,1.947,1.947,0,0,0,.182.82l-3,1.8a1.323,1.323,0,0,1-1.83-.48L14.5,3.519a1.987,1.987,0,1,0-2.509,0l-3.374,5.9a1.324,1.324,0,0,1-1.83.48L3.8,8.106A1.987,1.987,0,1,0,1.987,9.274a2.029,2.029,0,0,0,.319-.033L5.3,17.222H21.2L24.19,9.24a2.029,2.029,0,0,0,.319.033,1.987,1.987,0,0,0,0-3.974Z" fill="#ff0"/>
+                          </svg>
+                          
+                    </div>
+                    <p>GrowKing</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    {% endif %}
+    <div class="content">
+        {% if show_top_section != False %}
+        <div class="top-container rounded-and-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.403 59.403">
+                <path id="Logo"
+                    d="M282.419,265.105H265.375l12.009,12.009a17.064,17.064,0,1,1-.019-24.075L286.3,244.1a29.7,29.7,0,1,0,8.7,21H282.419Z"
+                    transform="translate(-235.6 -235.4)" fill="#28df99" />
+            </svg>
+            <h3>{{ heading }}</h3>
+        </div>
+        {% endif %}
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+
+    <footer>
+        <a href={{url_for('login')}}>Logout</a>
+        <p>AGB | Impressum | Datenschutz</p>
+        <p>© 2021 GrowMaster</p>
+    </footer>
+</body>
+
+</html>

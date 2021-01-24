@@ -1,0 +1,45 @@
+h2{
+    font-size: 30px;
+    color: #28DF99;
+    margin-top: -10rem;
+    margin-bottom: 9rem;
+}
+
+.svg-top{
+    margin-top: -1rem;
+}
+
+.play-store, .app-store{
+    width: 70%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-bottom: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.play-store{
+    background-image: url("./../img/play-store.svg");
+}
+.app-store{
+    background-image: url("./../img/app-store.svg");
+}
+button{
+    height: 55px;
+    width: 90%;
+    margin-bottom: 2rem;
+    background-color: #28DF99;
+    border: none;
+    border-radius: 11px;
+    font-size: 25px;
+    font-weight: bold;
+    transform: scale(1);
+    transition: all .4s ease;
+}
+button:active{
+    transform: scale(0.92);
+    outline: none;
+}

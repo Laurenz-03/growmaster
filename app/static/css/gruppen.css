@@ -1,0 +1,60 @@
+.content{
+    background-image: url("./../img/gruppen-bg.svg");
+    background-repeat: no-repeat;
+    background-position-x: -80px;
+    background-position-y: 90px;
+    background-attachment: fixed;
+}
+
+.header{
+    width: 80%;
+    padding: 10px;
+    margin-top: 4rem;
+}
+.header p{
+    text-align: center;
+    line-height: 1.4;
+}
+.dc-color{
+    color: #7289DA;
+}
+button{
+    transition: all .3s ease;
+}
+button:active{
+    transform: scale(0.94);
+    outline: none;
+}
+.dc-button, .insta-button, .telegram-button{
+    width: 70%;
+    height: 50px;
+    background-color: #7289DA;
+    border: none;
+    border-radius: 11px;
+    margin-top: 18px;
+    box-shadow: 0px 0px 15px #111213;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.insta-button{
+    background-color: #D772DA;
+}
+.telegram-button{
+    background-color: #0088CC;
+}
+.logo-box{
+    height: 50px;
+    width: 50px;
+    border-radius: 11px;
+    box-shadow: 0px 0px 15px #292929;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dc-button p, .insta-button p, .telegram-button p{
+    font-size: 16px;
+    margin-left: 70px;
+}
