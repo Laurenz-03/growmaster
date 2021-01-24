@@ -24,4 +24,4 @@ def aff_link():
 
 @app.route('/growking')
 def growking():
-    return render_template('pages/aff-link.html', heading="GrowKing", title="GrowKing")
+    return render_template('pages/growking.html', heading="GrowKing", title="GrowKing", growkinglogo=True)

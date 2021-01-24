@@ -1,0 +1,85 @@
+
+.header-container{
+    width: 90%;
+    box-shadow: 0px 0px 15px #FFFF00;
+    padding: 12px 20px;
+    border-radius: 11px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.header-container p{
+    text-align: center;
+}
+button{
+    transition: all .3s ease;
+}
+button:active{
+    transform: scale(0.94);
+    outline: none;
+}
+.feature-button{
+    width: 80%;
+    height: 60px;
+    background-color: #FFFF00;
+    border: none;
+    border-radius: 11px;
+    margin-top: 18px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0px 0px 15px #111213;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.logo-box{
+    height: 60px;
+    width: 60px;
+    border-radius: 11px;
+    box-shadow: 0px 0px 15px #292929;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature-text span{
+    margin-left: 70px;
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+}
+.feature-text p{
+    margin-left: 70px;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.last-feature{
+    background-color: #73C1C7;
+    width: 85%;
+    height: 60px;
+    border: none;
+    border-radius: 11px;
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+.last-feature p{
+    font-size: 19px;
+    color: black;
+    font-weight: bold;
+}
+.last-feature-icon{
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    background-color: #73C1C7;
+    border-radius: 11px;
+    top: -52px;
+    left: calc(50% - 33px);
+    box-shadow: 0px 0px 15px #5c5c5c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
