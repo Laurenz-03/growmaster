@@ -21,3 +21,7 @@ def gruppen():
 @app.route('/affiliate-link')
 def aff_link():
     return render_template('pages/aff-link.html', heading="Affiliate-Link", title="Affiliate-Link", show_top_section=False, sidebar=False)
+
+@app.route('/growking')
+def growking():
+    return render_template('pages/aff-link.html', heading="GrowKing", title="GrowKing")
