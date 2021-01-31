@@ -67,7 +67,7 @@
                     <p>Mein Profil</p>
                 </a>
                 <div class="sidebar-space"></div>
-                <a>
+                <a href={{url_for('coachings')}}>
                     <div class="icon-box">
                         <svg xmlns="http://www.w3.org/2000/svg" width="23.964" height="23.964"
                             viewBox="0 0 23.964 23.964">
@@ -105,7 +105,7 @@
                     <p>Gruppen</p>
                 </a>
                 <div class="sidebar-space"></div>
-                <a>
+                <a href={{url_for('buecher')}}>
                     <div class="icon-box">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21.163" height="24.186"
                             viewBox="0 0 21.163 24.186">
@@ -202,8 +202,8 @@
 
     <footer>
         <a href={{url_for('login')}}>Logout</a>
-        <p>AGB | Impressum | Datenschutz</p>
-        <p>© 2021 GrowMaster</p>
+        <p><a href={{url_for('agb')}}>AGB</a> | <a href={{url_for('impressum')}}>Impressum</a> | <a href={{url_for('datenschutz')}}>Datenschutz</a></p>
+        <a href={{url_for('home')}}>© 2021 GrowMaster</a>
     </footer>
 </body>
 

@@ -1,0 +1,48 @@
+.content {
+  background-image: url(./../img/coachings-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 11rem;
+}
+
+.produktbild {
+  width: 90%;
+  height: 200px;
+  margin-top: 3rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 90%;
+  height: 200px;
+  margin-top: -1rem;
+  padding-top: 2rem;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container h3{
+    color: #28DF99;
+    font-size: 21px;
+    margin-bottom: 1.5rem;
+}
+.kursfortschritt{
+    width: 90%;
+}
+.progress-bar{
+    width: 90%;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #121315;
+    margin-top: 8px;
+}
+.inner-progress-bar{
+    width: 60%;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #28DF99;
+}
