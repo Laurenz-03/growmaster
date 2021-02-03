@@ -1,18 +1,14 @@
 {% extends './layout.html' %}
 {% block content %}
+
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/coachings.css') }}">
 </head>
 
-<div class="produktbild rounded-and-shadow">
-    <p>Produktbild</p>
-</div>
-<div class="main-container rounded-and-shadow">
-    <h3>GrowMaster</h3>
-    <p class="kursfortschritt">Kursfortschritt:</p>
-    <div class="progress-bar">
-        <div class="inner-progress-bar"></div>
+<a href="{{url_for('kurs_uebersicht')}}">
+    <div class="growmaster rounded-and-shadow">
+        <p>GrowMaster<br>Produktbild</p>
     </div>
-</div>
+</a>
 
 {% endblock %}

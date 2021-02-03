@@ -1,6 +1,37 @@
 from flask import render_template, url_for, flash, redirect, request
 from app import app
 
+growmaster_kapitel = [
+    {"index": 1,
+    "title": "Einleitung",
+    "duration": "12min",
+    "progress": 100},
+    {"index": 2,
+    "title": "Basics",
+    "duration": "1h21",
+    "progress": 80},
+    {"index": 3,
+    "title": "Algorithmus",
+    "duration": "2h08min",
+    "progress": 50},
+    {"index": 4,
+    "title": "Design",
+    "duration": "1hm29in",
+    "progress": 12},
+    {"index": 5,
+    "title": "Account-Wachstum",
+    "duration": "3h55min",
+    "progress": 4},
+    {"index": 6,
+    "title": "Branding",
+    "duration": "58min",
+    "progress": 0},
+    {"index": 7,
+    "title": "Verkaufen",
+    "duration": "3h14min",
+    "progress": 0},
+]
+
 # Startseite (Landing Page)
 @app.route('/')
 def home():
@@ -20,7 +51,11 @@ def coachings():
     
 @app.route('/kurs')
 def kurs_uebersicht():
-    return render_template('pages/kurs.html', heading="GROWMASTER", title="GrowMaster")
+    return render_template('pages/kurs.html', heading="GROWMASTER", title="GrowMaster", growmaster_kapitel=growmaster_kapitel)
+
+@app.route('/kurs/<kapitel>')
+def gm_kapitel(kapitel):
+    return render_template(f'pages/gm-kapitel/{kapitel}.html', heading="Kapitel", title=kapitel.capitalize(), show_top_section=False)
     
 @app.route('/gruppen')
 def gruppen():
