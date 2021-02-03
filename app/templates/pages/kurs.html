@@ -38,9 +38,9 @@
         <h4 font-size="13px">{{kapitel["duration"]}}</h4>
     </div>
     <div class="kapitel-container rounded-and-shadow">
-        <p class="kursfortschritt">Kursfortschritt:</p>
+        <p class="kursfortschritt">Kapitelfortschritt:</p>
         <div class="progress-bar">
-            <div class="inner-progress-bar"></div>
+            <div class="inner-progress-bar" style="width: {{ kapitel['progress']}}%;"></div>
         </div>
         <a href="{{url_for('gm_kapitel', kapitel=kapitel['title'].lower())}}"><button class="kapitel-button">Zu den Videos</button></a>
 
